@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Datepicker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="datepicker-aria.css">
+  <link rel="stylesheet" href="assets/modal.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Form with Datepicker ARIA</h1>
+    </header>
+    <main>
+      <form>
+        <p>Today is <span id="todayIs"> </span></p>
+        <p><label for="date" id="label-date">
+            Choose a date: <br>
+            <span id="error-date" class="hidden"><img src="icons/baseline-error-red.svg" alt="Error: "> You have not chosen a valid date<br></span>
+          </label>
+          <input type="text" id="date">
+          <button type="button" id="dp1-toggler" class="btn-icon hidden">
+            <svg role="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="-947 529 24 24" enable-background="new -947 529 24 24" xml:space="preserve"><path class="icon" fill="#FFFFFF" d="M-927,532h-1v-2h-2v2h-10v-2h-2v2h-1c-1.1,0-2,0.9-2,2v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2v-16
+            	C-925,532.9-925.9,532-927,532z M-927,550h-16v-13h16V550z"/><path fill="none" d="M-947,529h24v24h-24V529z"/></svg>
+            <span class="hidden-visually">Open date picker</span>
+          </button>
+        </p>
+
+        <div class="datepicker hidden" id="dp1" role="dialog" aria-labelledby="dp1-heading" aria-modal="true">
+          <div class="dp-nav">
+            <h2 id="dp1-heading">Available dates in <span id="dp1-currentmonth" aria-live="polite">July</span></h2>
+            <button id="dp1-close"class="btn-icon">
+              <svg role="img" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              	 viewBox="-947 529 24 24" enable-background="new -947 529 24 24" xml:space="preserve"><path class="icon" fill="#FFFFFF" d="M-935,531c-5.5,0-10,4.5-10,10s4.5,10,10,10s10-4.5,10-10S-929.5,531-935,531z M-930,544.6l-1.4,1.4
+              	l-3.6-3.6l-3.6,3.6l-1.4-1.4l3.6-3.6l-3.6-3.6l1.4-1.4l3.6,3.6l3.6-3.6l1.4,1.4l-3.6,3.6L-930,544.6z"/><path fill="none" d="M-947,529h24v24h-24V529z"/></svg>
+                <span class="hidden-visually">Close</span>
+              </button>
+            <button type="button" id="dp1-previous">Previous month</button>
+            <button type="button" id="dp1-next">Next month </button>
+          </div>
+          <div class="dp-body">
+          </div>
+        </div>
+
+
+        <p><button type="button" id="go">Submit</button></p>
+        <p><span id="chosenDate"></span></p>
+
+      </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="assets/moment.min.js"></script>
+    <script src="assets/utils.js"></script>
+    <script src="assets/modal.js"></script>
+    <script src="datepicker-aria.js"></script>
+
+  </body>
+  </html>

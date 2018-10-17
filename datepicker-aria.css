@@ -1,0 +1,167 @@
+/* Base datepicker */
+
+/* Base styles for HTML/JS */
+.container {
+  max-width: 50em;
+  margin: 1em auto;
+  padding: 1em;
+  font-family: sans-serif;
+}
+.datepicker {
+  margin: 2em 0;
+}
+.dp-nav {
+  text-align: center;
+  padding: 0.5em;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: right;
+  padding: 0.5em 0.25em;
+}
+td {
+  width: 14.28%;
+}
+td button {
+  width: 3em;
+  padding: 0.5em;
+  text-align: right;
+}
+
+/* Design */
+body {
+  background: #ffffff;
+  color: #311b92;
+}
+form {
+  padding: 2em;
+  background: #e6ceff;
+  color: #311b92;
+}
+label img {
+  height: 1em;
+  vertical-align: bottom;
+  padding-bottom: 2px;
+}
+input, button {
+  padding: 0.5em;
+  border-radius: 3px;
+  border-color: #311b92;
+}
+input {
+  border-bottom-color: #FAF4FF;
+  border-right-color: #FAF4FF;
+}
+input.error {
+  border-color: #ae0000;
+}
+button {
+background: #311b92;
+border-color: #311b92;
+border-style: solid;
+color: #ffffff;
+}
+.btn-icon img,
+.btn-icon svg {
+  height: 1em;
+  vertical-align: baseline;
+}
+.icon {
+  fill: #ffffff;
+}
+button:hover,
+button:focus {
+  background-color: #ffffff;
+  color: #311b92;
+}
+button:hover .icon,
+button:focus .icon {
+  fill: #311b92;
+}
+.datepicker {
+  background: #ffffff;
+  color: #311b92;
+  border: 1px solid #311b92;
+  padding: 0.5em;
+}
+table {
+  border-collapse: collapse;
+}
+tr {
+  border-top: 1px solid #CDC7E5;
+}
+th, td {
+  background: #ffffff;
+  color: #311b92;
+}
+.dp-nav {
+  position: relative;
+}
+#dp1-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.dp-nav button:disabled {
+  color: #311b92;
+  border-color: #CDC7E5;
+  background: #ffffff;
+}
+.dp-body button {
+  font-weight: bold;
+  background: #CDC7E5;
+  color: #311b92;
+  border-color: #CDC7E5;
+}
+.dp-body button:hover,
+.dp-body button:focus {
+  border: 2px solid #311b92;
+}
+button.selected,
+button[aria-current] {
+  background: #311b92;
+  color: #CDC7E5;
+  border-color: #311b92;
+}
+.dp-body button:disabled {
+  color: #311b92;
+  background: #ffffff;
+  border: 0;
+  font-weight: normal;
+}
+
+
+
+/* Utilities */
+.showing-all {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.hidden-visually {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
+/* Ensure focusable items get a border which relies on the (accessible) color I've set for the element */
+button:focus,
+a:focus,
+input:focus {
+  border: 1px dashed currentColor;
+}
+/* Remove outline only for mouse users, keyboard users still get it
+see: https://twitter.com/LeaVerou/status/1045768279753666562
+*/
+:focus:not(:focus-visible) { outline: none }
