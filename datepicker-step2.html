@@ -3,7 +3,7 @@
 <head>
   <title>Datepicker</title>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="datepicker-step1.css">
+  <link rel="stylesheet" href="datepicker-step2.css">
 </head>
 <body>
   <div class="container">
@@ -18,11 +18,13 @@
             <span id="error-date" class="hidden"><img src="icons/baseline-error-red.svg" alt="Error: "> You have not chosen a valid date<br></span>
           </label>
           <input type="text" id="date" class="">
+					<button id="dp1-opener" type="button" class="btn">Open datepicker</button>
         </p>
 
-        <div class="datepicker" id="dp1">
+        <dialog class="datepicker" id="dp1" autofocus>
           <div class="dp-nav">
             <h2 id="dp1-heading">Available dates in October</h2>
+						<button id="dp1-closer" type="button" class="btn">Close</button>
             <button id="dp1-previous" type="button" class="btn">Previous month</button>
             <button id="dp1-next" type="button" class="btn">Next month </button>
           </div>
@@ -97,7 +99,7 @@
 							</tr>
 						</table>
           </div>
-        </div>
+        </dialog>
 
 
         <p><button type="button" class="btn" id="go">Submit</button></p>
@@ -108,6 +110,7 @@
     <footer>
     </footer>
     <script src="assets/moment.min.js"></script>
+		<script src="datepicker-step2.js"></script>
 
   </body>
   </html>

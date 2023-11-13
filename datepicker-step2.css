@@ -1,0 +1,218 @@
+/* Base datepicker */
+
+/* Intopia's base style sheet */
+html {
+	font-family: sans-serif;
+	font-size: 115%;
+	background-color: #ffffff;
+	color: #333;
+	line-height: 1.2em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: #000;
+	line-height: 1.2em;
+}
+
+i {
+	margin-right: .5em;
+}
+
+a {
+	color: #1b5998;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 1000px;
+	margin: auto;
+	padding: .5em;
+}
+
+.visually-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+}
+
+.btn {
+	background: #fff;
+	color: #000;
+	border: 1px solid;
+	padding: .5em 1em;
+	cursor: pointer;
+	margin: 0 0 1em;
+	font-size: 1rem;
+	border-radius: .2em;
+}
+
+a:focus,
+.btn:focus,
+.form-element input:focus,
+.form-element textarea:focus,
+.form-element select:focus {
+	outline: 3px solid #000;
+	outline-offset: 3px;
+	transition: .1s ease-in;
+}
+
+.btn:hover {
+	background: #e6e6e6;
+	transition: .1s ease-in;
+}
+
+.form-element label {
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+.form-element input[type=text],
+.form-element textarea,
+.form-element select {
+	display: block;
+	font-family: sans-serif;
+	font-size: 1rem;
+	border: 1px solid #000;
+	padding: .5em 1em;
+	margin: .5em 0 1em;
+}
+
+.form-element textarea {
+	width: 100%;
+	max-width: 20em;
+	height: 5em;
+}
+
+.form-element input[type=radio] {
+	margin-right: .5em;
+}
+
+.form-element .description {
+	color: #4d4d4d;
+	font-size: .9rem;
+	margin: -.8em 0 1em;
+}
+
+.form-element .error {
+	color: #b22121;
+	font-size: .9rem;
+	margin: -.8em 0 1em;
+}
+.form-element input[type=text].error {
+	border-color: #b22121;
+}
+
+.form-element fieldset {
+	border: dashed 1px gray;
+}
+
+.form-element legend {
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+table {
+	border-collapse: collapse;
+	width: 98%;
+	background-color: #ffffff;
+}
+
+caption {
+	text-align: left;
+}
+
+td,
+th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+}
+
+/* Base styles for HTML/JS */
+.container {
+  max-width: 50em;
+  margin: 1em auto;
+  padding: 1em;
+}
+.dp-nav {
+  text-align: center;
+  padding: 0.5em;
+}
+th,
+td {
+  text-align: right;
+}
+td {
+}
+td button {
+  text-align: right;
+}
+
+dialog {
+	width: 80%;
+	margin: auto;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Design */
+
+form {
+  padding: 2em;
+  background: #FEEEE9;
+}
+label img {
+  height: 1em;
+  vertical-align: bottom;
+  padding-bottom: 2px;
+}
+input.error {
+  border-color: #b22121;
+}
+.dp-nav {
+  position: relative;
+}
+#dp1-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.dp-body table 
+
+
+/* Utilities */
+.showing-all {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.hidden-visually {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    border: 0;
+}
