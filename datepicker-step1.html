@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Datepicker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="datepicker-step1.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Datepicker: Step 1</h1>
+    </header>
+    <main>
+      <form>
+        <p>Today is <span id="todayIs">Saturday 18th November, 2023 </span></p>
+        <p class="form-element"><label for="date" id="label-date">
+            Choose a date: <br>
+            <span id="error-date" class="hidden"><img src="icons/baseline-error-red.svg" alt="Error: "> You have not chosen a valid date<br></span>
+          </label>
+          <input type="text" id="date" class="">
+        </p>
+
+        <div class="datepicker" id="dp1">
+          <div class="dp-nav">
+            <h2 id="dp1-heading">Available dates in October</h2>
+            <button id="dp1-previous" type="button" class="btn">Previous month</button>
+            <button id="dp1-next" type="button" class="btn">Next month </button>
+          </div>
+          <div class="dp-body">
+						<table>
+							<tr>
+								<th scope="col">Sunday</th>
+								<th scope="col">Monday</th>
+								<th scope="col">Tuesday</th>
+								<th scope="col">Wednesday</th>
+								<th scope="col">Thursday</th>
+								<th scope="col">Friday</th>
+								<th scope="col">Saturday</th>
+							</tr>
+							<tr>
+								<td><button type="button">1</button></td>
+								<td><button type="button">2</button></td>
+								<td><button type="button">3</button></td>
+								<td><button type="button">4</button></td>
+								<td><button type="button">5</button></td>
+								<td><button type="button">6</button></td>
+								<td><button type="button">7</button></td>
+							</tr>
+							<tr>
+								<td><button type="button">8</button></td>
+								<td><button type="button">9</button></td>
+								<td><button type="button">10</button></td>
+								<td><button type="button">11</button></td>
+								<td><button type="button">12</button></td>
+								<td><button type="button">13</button></td>
+								<td><button type="button">14</button></td>
+							</tr>
+							
+							<tr>
+								<td><button type="button">15</button></td>
+								<td><button type="button">16</button></td>
+								<td><button type="button">17</button></td>
+								<td><button type="button">18</button></td>
+								<td><button type="button">19</button></td>
+								<td><button type="button">20</button></td>
+								<td><button type="button">21</button></td>
+							</tr>
+							
+							<tr>
+								<td><button type="button">22</button></td>
+								<td><button type="button">23</button></td>
+								<td><button type="button">24</button></td>
+								<td><button type="button">25</button></td>
+								<td><button type="button">26</button></td>
+								<td><button type="button">27</button></td>
+								<td><button type="button">28</button></td>
+							</tr>
+							
+							<tr>
+								<td><button type="button">29</button></td>
+								<td><button type="button">30</button></td>
+								<td><button type="button">31</button></td>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+							</tr>
+							
+							<tr hidden>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+								<td>4</td>
+								<td>5</td>
+								<td>6</td>
+								<td>7</td>
+							</tr>
+						</table>
+          </div>
+        </div>
+
+
+        <p><button type="button" class="btn" id="go">Submit</button></p>
+        <!--<p><span id="chosenDate">You have chosen Monday 13th November, 2023</span></p>-->
+
+      </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="assets/moment.min.js"></script>
+    <script src="assets/utils.js"></script>
+
+  </body>
+  </html>

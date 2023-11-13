@@ -217,5 +217,5 @@ function sendSelectedDate (whichOne) {
   const whichDate = currentDate.date(whichDay).format('DD/MM/YYYY')
   inputDate.value = ''
   inputDate.value = whichDate
-  closeDialog()
+  closeDialog();
 }
