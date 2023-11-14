@@ -19,14 +19,14 @@ let currentDate = moment('2023-11-18');
 // On Load
 //todayIs();
 btnOpenDP.removeAttribute('hidden');
-createCalendarTable(currentDate);
 
 // Events
 
 // "Show the dialog" button opens the dialog modally
 btnOpenDP.addEventListener("click", () => {
   dialog.showModal();
-	setMonthIndicator();
+	createCalendarTable(currentDate);
+	//setMonthIndicator();
 });
 
 // "Close" button closes the dialog
@@ -71,12 +71,14 @@ function todayIs () {
 }
 
 function setMonthIndicator () {
+	console.log("set month indicator");
   let whichMonth = currentDate.month();
   whichMonth = monthsOfYear[whichMonth];
   monthIndicator.innerHTML = whichMonth;
 }
 
 function createCalendarTable (whichDate) {
+	console.log("create calendar table: " + whichDate);
   // setup
   const tableLocation = dialog.querySelector('.dp-body');
   const tableCalendar = tableLocation.querySelector('table');
@@ -99,13 +101,14 @@ function createCalendarTable (whichDate) {
   // add buttons to cells
   populateTable(daysInCurrentMonth);
 
-  // add listener for any selections. if I do it before the buttons are there it doesn't work
+  // add listener for any selections. gotta do it after the buttons are created.
   tableCalendar.addEventListener('click', function (e) {
     sendSelectedDate(e);
   })
 }
 
 function populateTable (howManyDays) {
+	console.log("populate table: " + howManyDays);
   // put all cells in a collection
   const tableCells = dialog.querySelectorAll('td');
   // clear out any previous content
@@ -124,6 +127,7 @@ function populateTable (howManyDays) {
 }
 
 function disableInvalidDates (currentMonth) {
+	console.log("disable invalid dates: " + currentMonth);
   const earliestMonth = earliestDate.month();
   const latestMonth = latestDate.month();
   let btnsToDisable = [];
@@ -155,7 +159,7 @@ function disableInvalidDates (currentMonth) {
 }
 
 function updatePrevNextStatus (whichButton) {
-	console.log("updating Prev/Next status");
+	console.log("updating Prev/Next status: " + whichButton);
   if (whichButton === btnPrevious) {
     btnPrevious.setAttribute('disabled', 'disabled');
   } else if (whichButton === btnNext) {
@@ -167,6 +171,7 @@ function updatePrevNextStatus (whichButton) {
 }
 
 function goToPreviousMonth () {
+	console.log("go to prev");
   currentDate = currentDate.subtract(1, 'month');
   const newDays = currentDate.daysInMonth();
   updatePrevNextStatus();
@@ -177,6 +182,7 @@ function goToPreviousMonth () {
 // adapt for Next Month function
 
 function goToNextMonth () {
+	console.log("go to next");
   currentDate = currentDate.add(1, 'month')
   const newDays = currentDate.daysInMonth()
   updatePrevNextStatus()
@@ -185,6 +191,7 @@ function goToNextMonth () {
 }
 
 function sendSelectedDate (whichOne) {
+	console.log('send selected date');
   const whichBtn = whichOne.target;
   const btnDates = dialog.querySelectorAll('.dp-body button');
   btnDates.forEach(function (button) {

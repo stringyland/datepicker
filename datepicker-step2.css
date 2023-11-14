@@ -57,7 +57,7 @@ a:hover {
 	border-radius: .2em;
 }
 
-a:focus,
+/*a:focus,
 .btn:focus,
 .form-element input:focus,
 .form-element textarea:focus,
@@ -65,7 +65,7 @@ a:focus,
 	outline: 3px solid #000;
 	outline-offset: 3px;
 	transition: .1s ease-in;
-}
+}*/
 
 .btn:hover {
 	background: #e6e6e6;
