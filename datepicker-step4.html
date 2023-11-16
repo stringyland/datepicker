@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Datepicker</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="datepicker-step4.css">
+	<link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css ">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Datepicker: Step 4</h1>
+    </header>
+    <main>
+      <form>
+        <p>Today is <span id="todayIs">Saturday 18th November, 2023 </span></p>
+        <p class="form-element">
+					<label for="date" id="label-date">
+            Choose a date: <br>
+            <span id="error-date" hidden><img src="icons/baseline-error-red.svg" alt="Error: "> You have not chosen a valid date<br></span>
+          </label>
+					<span class="input-group">
+	          <input type="text" id="date" class="">
+						<span class="input-group-append">
+							<button id="dp1-opener" type="button" class="btn" hidden><img src="icons/baseline-calendar_today-24px.svg" alt="Open calendar"></button>
+						</span>
+					</span>
+        </p>
+
+        <dialog class="datepicker" id="dp1" autofocus>
+          <div class="dp-nav">
+            <h2 id="dp1-heading">Available dates in <span id="dp1-currentmonth" aria-live="polite">October</span></h2>
+						<button id="dp1-closer" type="button" class="btn btn-close" aria-label="Close date picker">
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.1323 4.55481L4.13232 16.5548M4.13232 4.55481L16.1323 16.5548" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+            <button id="dp1-previous" type="button" class="btn btn-icon-primary">
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 17L9 11L15 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+							Previous</button>
+            <button id="dp1-next" type="button" class="btn btn-icon-primary">
+							Next 
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.875 15.75L13.125 10.5L7.875 5.25" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+          </div>
+          <div class="dp-body">
+						<table>
+							<tr>
+								<th scope="col">Sunday</th>
+								<th scope="col">Monday</th>
+								<th scope="col">Tuesday</th>
+								<th scope="col">Wednesday</th>
+								<th scope="col">Thursday</th>
+								<th scope="col">Friday</th>
+								<th scope="col">Saturday</th>
+							</tr>
+						</table>
+          </div>
+        </dialog>
+
+
+        <p><button type="button" class="btn" id="go">Submit</button></p>
+        <p hidden>You have chosen <span id="chosenDate">Monday 13th November, 2023</span></p>
+
+      </form>
+    </main>
+    <footer>
+    </footer>
+    <script src="assets/moment.min.js"></script>
+		<script src="datepicker-step4.js"></script>
+
+  </body>
+  </html>
